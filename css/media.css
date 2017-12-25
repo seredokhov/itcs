@@ -1,0 +1,177 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.category_form {
+		padding: 20px 40px;
+	}
+	.category_form_inner form input {
+		width: 48%;
+		margin-bottom: 15px;
+	}
+	.category_form_inner form input.send_form_btn {
+		width: 170px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.category_form_inner h3 {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	footer .flex {
+		width: 100%;
+		justify-content: space-between;
+		padding: 5px 15px;
+	}
+	footer .flex:last-of-type {
+		width: 100%;
+		justify-content: flex-end;
+	}
+	footer .row-flex {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	header .row-flex {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	header .flex {
+		justify-content: space-between !important;
+		width: 100%;
+		padding: 5px 15px;
+	}
+	header .mobile_menu_btn_block,
+	.h1_block .category_menu_btn_block {
+		display: block;
+	}
+	
+	aside .aside_menu_ul li a.active::after,
+	.aside_menu_ul,
+	.product_group_description,
+	.product_group_brands,
+	.banner_product_block {
+		display: none;
+	}
+	header .nav_block {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 0px;
+		transition: all .3s linear;
+		z-index: 10;
+	}
+	header .nav_block.open {
+		width: 300px;
+	}
+	header .nav_block nav {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+	header .nav_block nav a {
+		display: block;
+	}
+	header .nav_block nav .menu_header {
+		display: block;
+		font-size: 18px;
+		padding: 10px 20px;
+		color: #fff;
+		background: #071325;
+		position: relative;
+	}
+	aside .aside_menu_ul {
+		margin-bottom: 50px;
+		padding: 0;
+		max-width: 100%;
+	}
+	.poligon_section {
+		background: none;
+		padding: 50px 0;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+@media only screen and (max-width : 550px) {
+	header .phone_block {
+		display: none;
+	}
+	.products_block > div {
+		width: 100%;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.h1_block .category_menu_btn {
+		font-size: 0;
+	}
+	header a.subscribe {
+		width: 180px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
