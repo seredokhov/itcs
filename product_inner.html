@@ -88,7 +88,9 @@
 				<div class="col-md-8">
 					<div class="category_header">
 						<h2>Резервное копирование</h2>
-						<div class="icon_block icon_1"></div>
+						<div class="icon_block">
+							<div class="product_icon icon_1"></div>
+						</div>
 					</div>
 					<div class="category_inner">
 						<p>Развитие средств и методов атак и обеспечения защиты не стоит на месте. Устаревшая антивирусная защита, использующая метод сравнения с известными сигнатурами, уже не способна остановить современные атаки, скрывающие вредоносный код под слоями шифрования в, казалось бы, надёжном трафике.</p>
@@ -144,12 +146,27 @@
 	</footer>
 
 
-	<div class="overlay"></div>
 	<!-- Ппелодаер -->
-
 	<div class="loader">
 		<div class="loader_inner"></div>
 	</div>
+	<!--  Модальное окно  -->
+	<div class="modal">
+		<button type="button" class="close_modal">✖</button>
+		<div class="inner">
+			<div class="modal_title">Отправите заявку прямо сейчас и наши специалисты проконсультируют вас:</div>
+			<form action="#">
+				<input type="text" placeholder="Имя">
+				<input type="text" placeholder="Телефон">
+				<input type="text" placeholder="Компания">
+				<input type="text" placeholder="E-mail">
+				<textarea placeholder="Ваш комментарий"></textarea>
+				<input type="submit" vlue="Отправить" class="modal_send">
+			</form>
+		</div>
+	</div>
+	<!--  Затемнение  -->
+	<div class="overlay"></div>
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
