@@ -1,3 +1,33 @@
+// Слайдер
+$(function() {
+	var section = $('.section_1');
+	var owl = section.find('.owl-carousel');
+	var prev = section.find('.prev');
+	var next = section.find('.next');
+
+	owl.owlCarousel({
+		loop:true,
+		margin:10,
+		nav:false,
+		dots:false,
+		items: 1,
+		mouseDrag:false,
+		touchDrag:true,
+		autoHeight:true
+	})
+
+	prev.on('click', function(){
+		owl.trigger('prev.owl.carousel');
+	})
+
+	next.on('click', function(){
+		owl.trigger('next.owl.carousel');
+	})
+
+});
+
+
+// Прелоадер
 $(window).load(function() {
 
 	$(".loader_inner").fadeOut();
@@ -58,6 +88,31 @@ $(function() {
 	overlay.add(close).on('click', function(){
 		modal.fadeOut();
 		overlay.fadeOut();
+	})
+
+});
+
+
+
+// Табы
+$(function() {
+	var links_block = $('.polygon_block').find('.polygon_item_group');
+	var link = links_block.find('.icon')
+	
+
+
+
+	link.on('click', function(){
+		$(this).parent().parent().find('.icon').removeClass('active');
+		$(this).addClass('active');
+
+
+		var tabs = $(this).closest('.row').find('.tab_block').find('.tab');
+		var linkIndex = $(this).attr("data-target");
+
+		tabs.removeClass('active');
+		tabs.eq(linkIndex).addClass('active');
+		
 	})
 
 });

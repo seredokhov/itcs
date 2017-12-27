@@ -687,6 +687,573 @@ aside .aside_menu_ul li a.active::after {
 	font-size: 18px;
 }
 
+/* Главня страница */
+.section_1 {
+	position: relative;
+}
+.section_1 .left_bg {
+	background: url('../img/main/left.png') no-repeat 0% 0%;
+	background-size: contain;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 353px;
+}
+.section_1 .right_bg {
+	background: url('../img/main/right.png') no-repeat 100% 0%;
+	background-size: contain;
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 353px;
+}
+.section_1 .owl-carousel {
+	background: #071325;
+}
+.section_1 .prev {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+	width: 40px;
+	height: 100px;
+	font-size: 100px;
+	line-height: 82px;
+	text-align: center;
+	cursor: pointer;
+	color: #eae9e9;
+}
+.section_1 .next {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	width: 40px;
+	height: 100px;
+	font-size: 100px;
+	line-height: 82px;
+	text-align: center;
+	cursor: pointer;
+	color: #eae9e9;
+}
+.section_1 .prev:active,
+.section_1 .next:active {
+	color: #ed1f24;
+}
+.section_1_form {
+	position: absolute;
+	z-index: 3;
+	bottom: 90px;
+	width: 100%;
+}
+.section_1_form .category_form {
+	margin-bottom: 0;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	background: rgba(7, 19, 37, .7);
+	border: 1px solid #a7a7a7;
+}
+.section_1_form .category_form h3 {
+	color: #fff;
+	font-size: 23px;
+}
+.section_1 .item {
+	padding: 150px 0 400px;
+	background-repeat: no-repeat;
+	background-position: center 0%;
+	background-size: cover;
+	min-height: 796px;
+}
+
+/* Фоновые изоображения для элементов слайдера */
+/* .section_1 .item.item_X */
+/* X - номер слайда*/
+.section_1 .item.item_1 {
+	background-image: url('../img/main/bg_1.jpg');
+}
+/*============*/
+.section_1 .item .title {
+	font-size: 24px;
+	color: #ed1f24;
+}
+.section_1 .item h1 {
+	margin: 0;
+	font-size: 48px;
+	line-height: normal;
+	color: #ffffff;
+	margin-bottom: 55px;
+}
+.section_1 .item a.more {
+	display: block;
+	font-size: 17px;
+	color: #ed1f24;
+	width: 200px;
+	height: 42px;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #ed1f24;
+	transition: all .2s ease-in-out;
+
+}
+.section_1 .item a.more:hover {
+	background: #ed1f24;
+	color: #fff;
+}
+
+/* Секции с многоугольниками */
+.section_2,
+.section_3 {
+	background-color: #071325;
+	background-image: url('../img/main/bg_2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.polygon_block {
+	text-align: center;
+	position: relative;
+	max-width: 535px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.section_3 .polygon_block {
+	margin-left: auto;
+}
+.polygon_block img {
+	position: relative;
+	z-index: 2;
+}
+.polygon_block .polygon_item_group > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 5;
+}
+.polygon_block .icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #bed8ff;
+	background-image: url('../img/icon_sprite.png');
+	margin: 5px 0;
+	cursor: pointer;
+	
+}
+.polygon_block .icon.active {
+	-webkit-box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
+	-moz-box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
+	box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
+}
+.polygon_block .title {
+	font-size: 24px;
+	color: #ed1f24;
+	position: absolute;
+	top: 235px;
+	width: 100%;
+	text-align: center;
+	font-family: "RobotoSlabBold";
+}
+.polygon_block span {
+	color: #bed8ff;
+	font-size: 14px;
+	line-height: normal;	
+}
+.tab_block .tab {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: opacity .8s linear;
+}
+.tab_block .tab.active {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+}
+/* Элементы первого многоугольника */
+/* 1 */
+.polygon_block .polygon_item_1 {
+	position: absolute;
+	top: 35px;
+	left: 25px;
+	width: 100px;
+}
+.polygon_block .polygon_item_1 span {
+	order: -1;
+}
+.polygon_block .polygon_item_1 .icon {
+	background-position: -274px -4px;
+}
+
+/* 2 */
+.polygon_block .polygon_item_2 {
+	position: absolute;
+	top: -55px;
+	left: 200px;
+	width: 140px;
+}
+.polygon_block .polygon_item_2 span {
+	order: -1;
+}
+.polygon_block .polygon_item_2 .icon {
+	background-position: -404px -7px;
+}
+
+/*3*/
+.polygon_block .polygon_item_3 {
+	position: absolute;
+	top: 35px;
+	right: 25px;
+	width: 100px;
+}
+.polygon_block .polygon_item_3 span {
+	order: -1;
+}
+.polygon_block .polygon_item_3 .icon {
+	background-position: -337px -3px;
+}
+
+/*4*/
+.polygon_block .polygon_item_4 {
+	position: absolute;
+	top: 225px;
+	left: -65px;
+	width: 140px;
+}
+.polygon_block .polygon_item_4 span {
+	order: 0;
+}
+.polygon_block .polygon_item_4 .icon {
+	background-position: -473.5px -2.5px;
+}
+
+/*5*/
+.polygon_block .polygon_item_5 {
+	position: absolute;
+	top: 195px;
+	left: 60px;
+	width: 140px;
+}
+.polygon_block .polygon_item_5 span {
+	order: -1;
+}
+.polygon_block .polygon_item_5 .icon {
+	background-position: -215.5px -3.5px;
+}
+/*6*/
+.polygon_block .polygon_item_6 {
+	position: absolute;
+	top: 195px;
+	right: 60px;
+	width: 140px;
+}
+.polygon_block .polygon_item_6 span {
+	order: -1;
+}
+.polygon_block .polygon_item_6 .icon {
+	background-position: -532px -2.5px;
+}
+/*7*/
+.polygon_block .polygon_item_7 {
+	position: absolute;
+	top: 225px;
+	right: -65px;
+	width: 140px;
+}
+.polygon_block .polygon_item_7 span {
+	order: 0;
+}
+.polygon_block .polygon_item_7 .icon {
+	background-position: -152px -2px;
+}
+/*8*/
+.polygon_block .polygon_item_8 {
+	position: absolute;
+	top: 308px;
+	left: 200px;
+	width: 140px;
+}
+.polygon_block .polygon_item_8 span {
+	order: -1;
+}
+.polygon_block .polygon_item_8 .icon {
+	background-position: -593px -2.5px;
+}
+
+/* 9 */
+.polygon_block .polygon_item_9 {
+	position: absolute;
+	top: 385px;
+	left: 5px;
+	width: 140px;
+}
+.polygon_block .polygon_item_9 span {
+	order: 0;
+}
+.polygon_block .polygon_item_9 .icon {
+	background-position: -79px -1px;
+}
+
+/*10*/
+.polygon_block .polygon_item_10 {
+	position: absolute;
+	top: 430px;
+	left: 165px;
+	width: 210px;
+}
+.polygon_block .polygon_item_10 span {
+	order: -1;
+}
+.polygon_block .polygon_item_10 .icon {
+    background-position: 46px -4.5px;
+}
+
+/* 11 */
+.polygon_block .polygon_item_11 {
+	position: absolute;
+	top: 385px;
+	right: 5px;
+	width: 140px;
+}
+.polygon_block .polygon_item_11 span {
+	order: 0;
+}
+.polygon_block .polygon_item_11 .icon {
+	background-position: -9px -1px;
+}
+
+/*------*/
+
+.polygon_block .blur {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
+	-moz-box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
+	box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
+}
+.section_2 h2,
+.section_3 h2 {
+	color: #ed1f24;
+	font-size: 24px;
+	margin: 0;
+    margin-bottom: 25px;
+    margin-top: 75px;
+}
+.section_2 p,
+.section_3 p {
+	color: #fff;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+/* секци 3 */
+.section_3 {
+	background-image: url('../img/main/bg_3.png');
+}
+
+/* Элементы второго многоугольника */
+/* 1 */
+.section_3 .polygon_block .polygon_item_1 {
+	position: absolute;
+	top: 15px;
+	left: 5px;
+	width: 140px;
+}
+.section_3.polygon_block .polygon_item_1 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_1 .icon {
+	background-position: -10px -78px;
+}
+
+/* 2 */
+.section_3 .polygon_block .polygon_item_2 {
+	position: absolute;
+	top: -55px;
+	left: 200px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_2 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_2 .icon {
+	background-position: -337.5px -75px;
+}
+
+/*3*/
+.section_3 .polygon_item_3 {
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	width: 145px;
+}
+.section_3 .polygon_item_3 span {
+	order: -1;
+}
+.section_3 .polygon_item_3 .icon {
+	background-position: -80px -78px;
+}
+
+/*4*/
+.section_3 .polygon_block .polygon_item_4 {
+	position: absolute;
+	top: 225px;
+	left: -65px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_4 span {
+	order: 0;
+}
+.section_3 .polygon_block .polygon_item_4 .icon {
+	background-position: -405px -74px;
+}
+
+/*5*/
+.section_3 .polygon_block .polygon_item_5 {
+	position: absolute;
+	top: 195px;
+	left: 22px;
+	width: 220px;
+}
+.section_3 .polygon_block .polygon_item_5 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_5 .icon {
+	background-position: -155px -77px;
+}
+/*6*/
+.section_3 .polygon_block .polygon_item_6 {
+	position: absolute;
+	top: 195px;
+	right: 60px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_6 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_6 .icon {
+	background-position: -474px -74px;
+}
+/*7*/
+.section_3 .polygon_block .polygon_item_7 {
+	position: absolute;
+	top: 225px;
+	right: -65px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_7 span {
+	order: 0;
+}
+.section_3 .polygon_block .polygon_item_7 .icon {
+	background-position: -216px -75px;
+}
+/*8*/
+.section_3 .polygon_block .polygon_item_8 {
+	position: absolute;
+	top: 308px;
+	left: 200px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_8 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_8 .icon {
+	background-position: -593px -2.5px;
+}
+
+/* 9 */
+.section_3 .polygon_block .polygon_item_9 {
+	position: absolute;
+	top: 385px;
+	left: 5px;
+	width: 140px;
+}
+.section_3 .polygon_block .polygon_item_9 span {
+	order: 0;
+}
+.section_3 .polygon_block .polygon_item_9 .icon {
+	background-position: -534px -72px;
+}
+
+/*10*/
+.section_3 .polygon_block .polygon_item_10 {
+	position: absolute;
+	top: 448px;
+	left: 165px;
+	width: 210px;
+}
+.section_3 .polygon_block .polygon_item_10 span {
+	order: -1;
+}
+.section_3 .polygon_block .polygon_item_10 .icon {
+	background-position: -279px -75px;
+}
+
+/* 11 */
+.section_3 .polygon_block .polygon_item_11 {
+	position: absolute;
+	top: 385px;
+	right: 20px;
+	width: 100px;
+}
+.section_3 .polygon_block .polygon_item_11 span {
+	order: 0;
+}
+.section_3 .polygon_block .polygon_item_11 .icon {
+	background-position: -604px -71px;
+}
+/*------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -774,3 +1341,7 @@ footer .copy_block {
 	color: #fff;
 	background: #071325;
 }
+
+
+
+

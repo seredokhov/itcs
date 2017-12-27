@@ -1,6 +1,12 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1910px) {
+	.section_1 .left_bg,
+	.section_1 .right_bg {
+		display: none;
+	}
+}
 @media only screen and (max-width : 1200px) {
 	.category_form {
 		padding: 20px 40px;
@@ -31,6 +37,37 @@
 	footer .row-flex {
 		padding-top: 10px;
 		padding-bottom: 10px;
+	}
+	.section_1 .item {
+		min-height: auto;
+		padding-top: 30px;
+		padding-bottom: 400px;
+	}
+	.section_1 .item h1 {
+		font-size: 30px;
+	}
+	.section_1_form .category_form h3,
+	.section_1 .item .title {
+		font-size: 18px;
+	}
+	.section_1_form {
+		bottom: 25px;
+	}
+	.section_1 .prev,
+	.section_1 .next {
+		display: none;
+	}
+	.polygon_block {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.section_2 h2,
+	.section_3 h2 {
+		text-align: center;
+	}
+	.section_2, .section_3 {
+		background-image: none;
+		padding: 50px 0;
 	}
 }
 
@@ -125,6 +162,18 @@
 	.modal .inner .modal_title {
 		font-size: 18px;
 	}
+	.section_1_form .category_form {
+		padding: 20px;
+	}
+	.section_1_form .category_form_inner form input.send_form_btn {
+		margin-bottom: 0;
+	}
+	.section_1 .item {
+		padding-bottom: 300px;
+	}
+	.section_1 .item h1 {
+		margin-bottom: 10px;
+	}
 
 }
 
@@ -175,6 +224,46 @@
 	.breadcrumbs + .h1_block {
 		margin: 20px 0 45px;
 	}
+	.polygon_block img,
+	.polygon_block .blur {
+		display: none;
+	}
+	.section_2 .polygon_block .title,
+	.section_3 .polygon_block .title {
+		position: static;
+		margin-bottom: 20px;
+	}
+	.polygon_block .polygon_item_group,
+	.section_3 .polygon_block .polygon_item_group {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.polygon_block .polygon_item_group span,
+	.section_3 .polygon_block .polygon_item_group span {
+		order: 0;
+		padding: 0 10px;
+		flex-shrink: 999;
+	}
+	.polygon_block .polygon_item_group > div,
+	.section_3 .polygon_block .polygon_item_group > div {
+		position: static;
+		width: 50%;
+		flex-direction: row;
+		text-align: left;
+	}
+	.polygon_block .polygon_item_group > div.empty {
+		display: none;
+	}
+	.section_2 h2,
+	.section_3 h2 {
+		margin-top: 25px;
+	}
+	.section_2, .section_3 {
+		padding: 35px 0;
+	}
+	.polygon_block {
+		margin: 0 auto;
+	}
 
 }
 @media only screen and (max-width : 550px) {
@@ -204,6 +293,18 @@
 	}
 	.new_header_container .title_block h1 {
 		font-size: 18px;
+	}
+	.polygon_block .polygon_item_group > div,
+	.section_3 .polygon_block .polygon_item_group > div {
+		width: 100%;
+	}
+}
+@media only screen and (max-width : 400px) {
+	.category_form_inner form input {
+		width: 100%;
+	}
+	.section_1 .item {
+		padding-bottom: 430px;
 	}
 }
 
