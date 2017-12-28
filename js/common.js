@@ -1,28 +1,30 @@
 // Слайдер
 $(function() {
-	var section = $('.section_1');
-	var owl = section.find('.owl-carousel');
-	var prev = section.find('.prev');
-	var next = section.find('.next');
+	if ($('div').is('.owl-carousel')) {
+		var section = $('.section_1');
+		var owl = section.find('.owl-carousel');
+		var prev = section.find('.prev');
+		var next = section.find('.next');
 
-	owl.owlCarousel({
-		loop:true,
-		margin:10,
-		nav:false,
-		dots:false,
-		items: 1,
-		mouseDrag:false,
-		touchDrag:true,
-		autoHeight:true
-	})
+		owl.owlCarousel({
+			loop:true,
+			margin:10,
+			nav:false,
+			dots:false,
+			items: 1,
+			mouseDrag:false,
+			touchDrag:true,
+			autoHeight:true
+		})
 
-	prev.on('click', function(){
-		owl.trigger('prev.owl.carousel');
-	})
+		prev.on('click', function(){
+			owl.trigger('prev.owl.carousel');
+		})
 
-	next.on('click', function(){
-		owl.trigger('next.owl.carousel');
-	})
+		next.on('click', function(){
+			owl.trigger('next.owl.carousel');
+		})
+	}
 
 });
 
@@ -110,9 +112,39 @@ $(function() {
 		var tabs = $(this).closest('.row').find('.tab_block').find('.tab');
 		var linkIndex = $(this).attr("data-target");
 
+
 		tabs.removeClass('active');
 		tabs.eq(linkIndex).addClass('active');
 		
 	})
 
 });
+
+// Инициализация яндекс карты
+$(function() {
+	if ($('div').is('#map')) {
+		ymaps.ready(init);
+		var myMap;
+		var	myPlacemark;
+
+		function init(){
+			myMap = new ymaps.Map("map", {
+				center: [55.815241, 37.352884],
+				zoom: 17,
+				controls: ['zoomControl', 'fullscreenControl']
+			});
+			myMap.behaviors.disable(['drag','scrollZoom', 'rightMouseButtonMagnifier']);
+			myPlacemark = new ymaps.Placemark(
+				[55.815241, 37.352884],
+				{balloonContent: 'Ильинское шоссе, дом 1А' },
+				{
+					iconLayout: 'default#image',
+					iconImageHref: 'img/main/mapMark.png',
+					iconImageSize: [60, 75],
+					iconImageOffset: [-40, -60]
+				}
+				);
+			myMap.geoObjects.add(myPlacemark);
+		}
+	}
+})

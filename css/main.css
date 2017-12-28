@@ -691,7 +691,8 @@ aside .aside_menu_ul li a.active::after {
 .section_1 {
 	position: relative;
 }
-.section_1 .left_bg {
+.section_1 .left_bg,
+.section_6 .left_bg {
 	background: url('../img/main/left.png') no-repeat 0% 0%;
 	background-size: contain;
 	position: absolute;
@@ -702,7 +703,8 @@ aside .aside_menu_ul li a.active::after {
 	height: 100%;
 	width: 353px;
 }
-.section_1 .right_bg {
+.section_1 .right_bg,
+.section_6 .right_bg {
 	background: url('../img/main/right.png') no-repeat 100% 0%;
 	background-size: contain;
 	position: absolute;
@@ -810,7 +812,8 @@ aside .aside_menu_ul li a.active::after {
 
 /* Секции с многоугольниками */
 .section_2,
-.section_3 {
+.section_3,
+.section_4 {
 	background-color: #071325;
 	background-image: url('../img/main/bg_2.png');
 	background-repeat: no-repeat;
@@ -839,6 +842,12 @@ aside .aside_menu_ul li a.active::after {
 	align-items: center;
 	z-index: 5;
 }
+.polygon_block .polygon_item_group > div.empty {
+	width: 14px;
+	height: 14px;
+	background-color: #205cb7;
+	border-radius: 50%;
+}
 .polygon_block .icon {
 	display: block;
 	width: 40px;
@@ -854,6 +863,7 @@ aside .aside_menu_ul li a.active::after {
 	-webkit-box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
 	-moz-box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
 	box-shadow: 0px 0px 30px 4px rgba(237,31,36,1);
+	cursor: default;
 }
 .polygon_block .title {
 	font-size: 24px;
@@ -1047,7 +1057,8 @@ aside .aside_menu_ul li a.active::after {
 	box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
 }
 .section_2 h2,
-.section_3 h2 {
+.section_3 h2,
+.section_4 h2 {
 	color: #ed1f24;
 	font-size: 24px;
 	margin: 0;
@@ -1055,7 +1066,8 @@ aside .aside_menu_ul li a.active::after {
     margin-top: 75px;
 }
 .section_2 p,
-.section_3 p {
+.section_3 p,
+.section_4 p {
 	color: #fff;
 	font-size: 16px;
 	line-height: 22px;
@@ -1165,15 +1177,8 @@ aside .aside_menu_ul li a.active::after {
 /*8*/
 .section_3 .polygon_block .polygon_item_8 {
 	position: absolute;
-	top: 308px;
-	left: 200px;
-	width: 140px;
-}
-.section_3 .polygon_block .polygon_item_8 span {
-	order: -1;
-}
-.section_3 .polygon_block .polygon_item_8 .icon {
-	background-position: -593px -2.5px;
+	top: 342px;
+	left: 260px;
 }
 
 /* 9 */
@@ -1219,36 +1224,263 @@ aside .aside_menu_ul li a.active::after {
 }
 /*------*/
 
+/* секци 4 */
+.section_4 {
+	background-image: url('../img/main/bg_2.png');
+}
 
+/* Элементы третьего многоугольника */
+/* 1 */
+.section_4 .polygon_block .polygon_item_1 {
+	position: absolute;
+	top: 60px;
+	left: 5px;
+	width: 140px;
+}
+.section_4 .polygon_block .polygon_item_1 span {
+	order: 0;
+}
+.section_4 .polygon_block .polygon_item_1 .icon {
+	background-position: -11px -156px;
+}
 
+/* 2 */
+.section_4 .polygon_block .polygon_item_2 {
+	position: absolute;
+	top: -25px;
+	left: 200px;
+	width: 140px;
+}
+.section_4 .polygon_block .polygon_item_2 span {
+	order: 0;
+}
+.section_4 .polygon_block .polygon_item_2 .icon {
+	background-position: -285px -153px;
+}
 
+/*3*/
+.section_4 .polygon_item_3 {
+	position: absolute;
+	top: 60px;
+	right: 0px;
+	width: 145px;
+}
+.section_4 .polygon_item_3 span {
+	order: 0;
+}
+.section_4 .polygon_item_3 .icon {
+	background-position: -82px -155px;
+}
 
+/*4*/
+.section_4 .polygon_block .polygon_item_4 {
+	position: absolute;
+	top: 225px;
+	left: -65px;
+	width: 140px;
+}
+.section_4 .polygon_block .polygon_item_4 span {
+	order: 0;
+}
+.section_4 .polygon_block .polygon_item_4 .icon {
+	background-position: -345.5px -153px;
+}
 
+/*5*/
+.section_4 .polygon_block .polygon_item_5 {
+	position: absolute;
+	top: 213px;
+	left: 22px;
+	width: 220px;
+}
+.section_4 .polygon_block .polygon_item_5 span {
+	order: -1;
+}
+.section_4 .polygon_block .polygon_item_5 .icon {
+	background-position: -154px -153px;
+}
+/*6*/
+.section_4 .polygon_block .polygon_item_6 {
+	position: absolute;
+	top: 195px;
+	right: 60px;
+	width: 140px;
+}
+.section_4 .polygon_block .polygon_item_6 span {
+	order: -1;
+}
+.section_4 .polygon_block .polygon_item_6 .icon {
+	background-position: -409px -149px;
+}
+/*7*/
+.section_4 .polygon_block .polygon_item_7 {
+	position: absolute;
+	top: 225px;
+	right: -65px;
+	width: 140px;
+}
+.section_4 .polygon_block .polygon_item_7 span {
+	order: 0;
+}
+.section_4 .polygon_block .polygon_item_7 .icon {
+	background-position: -217px -154px;
+}
+/*8*/
+.section_4 .polygon_block .polygon_item_8 {
+	position: absolute;
+	top: 320px;
+	left: 210px;
+	width: 120px;
+}
+.section_4 .polygon_block .polygon_item_8 span {
+	order: 0;
+}
+.section_4 .polygon_block .polygon_item_8 .icon {
+	background-position: -476px -147px;
+}
 
+/* 9 */
+.section_4 .polygon_block .polygon_item_9 {
+	position: absolute;
+	top: 400px;
+	left: 65px;
+}
 
+/*10*/
+.section_4 .polygon_block .polygon_item_10 {
+	position: absolute;
+	top: 485px;
+	left: 263px;
+}
+/* 11 */
+.section_4 .polygon_block .polygon_item_11 {
+	position: absolute;
+	top: 400px;
+	right: 65px;
+}
 
+/* секци 5 */
+.section_5 {
+}
+.section_5 .row {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.section_5 h2,
+.section_6 h2,
+.section_7 h2 {
+	font-size: 30px;
+	color: #071325;
+	font-family: "RobotoSlabBold";
+	margin: 0;
+	margin-bottom: 40px;
+}
 
+.section_5 p {
+	color: #000;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+.section_5 .img_block {
+	background: url('../img/main/bg_4.png') no-repeat center;
+	display: flex;
+	align-items: center;
+	padding: 200px 0;
+}
 
+.section_5 .img_block img {
+	max-width: 100%;
+	margin: auto;
 
+}
+.section_5 .descript_block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
+/* секци 6 */
+.section_6 {
+	position: relative;
+	padding: 60px 0;
+}
+.section_6 .container {
+	position: relative;
+	z-index: 3;
+}
+.section_6 .left_bg {
+	background-image: url(../img/main/left2.png);
+}
+.section_6 .right_bg {
+	background-image: url(../img/main/right2.png);
+}
 
+.section_6 h2 {
+	margin-bottom: 80px;
+}
 
+.section_6 .advantages_block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.section_6 .advantages_block .advantage {
+	flex-basis: 225px;
+}
+.advantage .icon {
+	width: 100%;
+	height: 225px;
+	background-color: #dceafc;
+	background-image: url('../img/main/advantages.png');
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+.advantage:nth-of-type(1) .icon {
+	background-position: 30px 28px;
+}
+.advantage:nth-of-type(2) .icon {
+	background-position: -175px 28px;
+}
+.advantage:nth-of-type(3) .icon {
+	background-position: -373px 28px;
+}
+.advantage:nth-of-type(4) .icon {
+	background-position: -572px 28px;
+}
+.advantage .line {
+	width: 100%;
+	height: 5px;
+	background-color: #ed1f24;
+	margin-bottom: 45px;
+}
+.advantage span {
+	color: #000;
+	font-size: 18px;
+	display: block;
+}
+/* секци 7 */
+.section_7 {
+	padding: 120px 0;
+}
+.section_7 h2 {
 
+}
+.section_7 .brands img {
+	display: block;
+	max-width: 100%;
+	margin: 15px auto;
+}
 
+/* секци 8 */
+.section_8 {
+	padding: 150px 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.section_8 div#map {
+	height: 500px;
+	width: 100%;
+}
 
 
 
