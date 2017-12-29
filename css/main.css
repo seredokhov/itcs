@@ -10,9 +10,9 @@
 *:-ms-input-placeholder {
 	color: #535353;
 }
-
-html.js .loader {
-	background: none repeat scroll 0 0 #ffffff;
+/* Прелоадер */
+.loader {
+	background: none repeat scroll 0 0 #071325;
 	bottom: 0;
 	height: 100%;
 	left: 0;
@@ -22,12 +22,10 @@ html.js .loader {
 	width: 100%;
 	z-index: 9999;
 }
-html.js .loader_inner {
-	background-image: url("../img/preloader.gif");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: #fff;
+.loader_inner {
+	border: 5px solid #fff;
+	border-right-color: transparent;
+	border-radius: 50%;
 	height: 60px;
 	width: 60px;
 	margin-top: -30px;
@@ -35,8 +33,20 @@ html.js .loader_inner {
 	left: 50%;
 	top: 50%;
 	position: absolute;
+	animation-name: spin;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
-
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+/*----*/
 body {
 	font-family: sans-serif;
 	font-size: 16px;
@@ -169,7 +179,8 @@ header .nav_block nav a {
 	transition: all .1s linear;
 	white-space: nowrap;
 }
-header .nav_block nav a:hover {
+header .nav_block nav a:hover,
+header .nav_block nav a.active {
 	background: #071325;
 }
 header .nav_block nav .menu_header {
@@ -829,6 +840,14 @@ aside .aside_menu_ul li a.active::after {
 	margin-top: 60px;
 	margin-bottom: 20px;
 }
+.polygon_block .shadow {
+	position: absolute;
+	width: 100%;
+	height: 36px;
+	bottom: -75px;
+	left: 0;
+	background: url('../img/main/shadow.png') no-repeat center;
+}
 .section_3 .polygon_block {
 	margin-left: auto;
 }
@@ -1051,6 +1070,7 @@ aside .aside_menu_ul li a.active::after {
 	left: 50%;
 	width: 2px;
 	height: 2px;
+	background: rgba(14,37,72,1);
 	border-radius: 50%;
 	-webkit-box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
 	-moz-box-shadow: 0px 0px 160px 151px rgba(14,37,72,1);
@@ -1476,18 +1496,43 @@ aside .aside_menu_ul li a.active::after {
 .section_8 {
 	padding: 150px 15px;
 }
-
+.section_8 .row_flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
 .section_8 div#map {
 	height: 500px;
 	width: 100%;
 }
 
-
-
-
-
-
-
+.section_8 .contact_title {
+	font-size: 18px;
+	color: #071325;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.section_8 .contact_inner {
+	font-size: 17px;
+	color: #071325;
+	margin-bottom: 45px;
+}
+/* Страница контакты */
+.contacts .contact_title {
+	font-size: 17px;
+	color: #071325;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.contacts .contact_inner {
+	font-size: 18px;
+	color: #071325;
+	margin-bottom: 45px;
+}
+.contact_map_block div#map {
+	height: 575px;
+}
 
 
 /* Футер */

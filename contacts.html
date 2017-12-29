@@ -19,6 +19,9 @@
 
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/animate/animate.css">
+	<!-- OwlCarousel -->
+	<link rel="stylesheet" href="libs/owlCarousel/owl.carousel.css">
+	<link rel="stylesheet" href="libs/owlCarousel/owl.theme.default.css">
 	
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -53,36 +56,36 @@
 		<div class="nav_block">
 			<nav class="container">
 				<div class="menu_header">Меню<button type="button" class="close_menu">&#10006;</button></div>
-				<a href="about.html" class="active">О компании</a>
+				<a href="about.html">О компании</a>
 				<a href="product.html">Продукты</a>
 				<a href="services.html">Услуги</a>
 				<a href="news.html">Новости и статьи</a>
-				<a href="contacts.html">Контакты</a>
+				<a href="contacts.html" class="active">Контакты</a>
 			</nav>
 		</div>
 	</header>
 	<main>
-		<div class="container">
-			<div class="h1_block">
-				<h1>О компании</h1>
+		<div class="container contacts">
+			<div class="h1_block contact_h1">
+				<h1>Контакты</h1>
 			</div>
-			<div class="about_inner">
-				<p>Компания ITCS является специализированным интегратором в области информационной безопасности и оказывает консалтинговые услуги в части приведения ИТ и ИБ систем Заказчиков в соответствие требованиям Федеральных законов и отраслевых регуляторов.</p>
-				<p>Основным бизнесом компании является оказание услуг в области внедрения решений, консалтинга и технической поддержки. Реализация проектов «под ключ» подразумевает поставку программных и аппаратных решений, поэтому компания имеет партнерские статусы лидирующих Российских и зарубежных вендоров.</p>
-				<p>Специалистами компании выполнен ряд аудитов информационной безопасности (включая тестирования на проникновение в соответствии с требованиями PCI DSS для банков и процессинговых центров).</p>
-				<p>Отсутствие корпоративной бюрократии позволяет нам оперативно выполнять сложные и ответственные проекты.</p>
-				<p>Наше отношение к Заказчику основано на ценности долгосрочного партнерства. Поэтому на первый план выходит успех Заказчика и сейчас, и в перспективе. Мы ценим оказанное нам доверие и очень стараемся его оправдать.</p>
-			</div>
-		</div>
-		<div class="poligon_section">
-			<div class="container">
-				<div class="flex-row">
-					<div class="wrap"></div>
-					<div class="wrap"></div>
-					<div class="wrap"></div>
-					<div class="wrap"></div>
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="contact_title">Почтовый адрес:</div>
+					<div class="contact_inner">143405, Московская область, г. Красногорск, Ильинское шоссе, дом 1А, а/я 22</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="contact_title">Телефон:</div>
+					<div class="contact_inner">+7 (499) 653-73-15</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="contact_title">Электронная почта:</div>
+					<div class="contact_inner">info@it-cs.ru</div>
 				</div>
 			</div>
+		</div>
+		<div class="contact_map_block">
+			<div id="map"></div>
 		</div>
 	</main>
 	<footer>
@@ -136,9 +139,13 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- Yandex map API -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
-	<script src="libs/animate/animate-css.js"></script>	
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/owlCarousel/owl.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 	
 </body>
