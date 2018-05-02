@@ -699,32 +699,39 @@ aside .aside_menu_ul li a.active::after {
 }
 
 /* Главня страница */
-.section_1 {
-	position: relative;
-}
-.section_1 .left_bg,
-.section_6 .left_bg {
-	background: url('../img/main/left.png') no-repeat 0% 0%;
-	background-size: contain;
-	position: absolute;
-	z-index: 2;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	height: 100%;
-	width: 353px;
-}
-.section_1 .right_bg,
-.section_6 .right_bg {
-	background: url('../img/main/right.png') no-repeat 100% 0%;
-	background-size: contain;
-	position: absolute;
-	z-index: 2;
+
+/* Индикаторы страниц */
+.scroll_controls {
+	position: fixed;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 150;
 	right: 0;
 	top: 0;
-	bottom: 0;
-	height: 100%;
-	width: 353px;
+	width: 40px;
+	height: 100vh;
+}
+.scroll_controls a {
+	text-decoration: none;
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #fff;
+	border: 2px solid #071325;
+	margin: 3px;
+	color: #fff;
+	text-indent: -9999px;
+	opacity: 0.6;
+}
+.scroll_controls a.active {
+	background: red;
+	opacity: 1;
+}
+
+.section_1 {
+	position: relative;
 }
 .section_1 .owl-carousel {
 	background: #071325;
@@ -732,33 +739,39 @@ aside .aside_menu_ul li a.active::after {
 .section_1 .prev {
 	position: absolute;
 	z-index: 3;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 10px;
+	top: 0;
+	left:60px;
 	width: 40px;
-	height: 100px;
+	display: flex;
+	align-items: center;
+	height: 100%;
 	font-size: 100px;
 	line-height: 82px;
 	text-align: center;
 	cursor: pointer;
 	color: #eae9e9;
+	user-select: none;
 }
 .section_1 .next {
 	position: absolute;
 	z-index: 3;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 10px;
+	top: 0;
+	right:60px;
 	width: 40px;
-	height: 100px;
+	display: flex;
+	align-items: center;
+	height: 100%;
 	font-size: 100px;
 	line-height: 82px;
 	text-align: center;
 	cursor: pointer;
 	color: #eae9e9;
+	user-select: none;
 }
 .section_1 .prev:active,
-.section_1 .next:active {
+.section_1 .next:active,
+.section_1 .prev:hover,
+.section_1 .next:hover  {
 	color: #ed1f24;
 }
 .section_1_form {
@@ -767,6 +780,41 @@ aside .aside_menu_ul li a.active::after {
 	bottom: 90px;
 	width: 100%;
 }
+
+
+
+div#arrow {
+	display: block;
+	background: url('../img/main/arrow.png') no-repeat 0px 0px;
+	width: 45px;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	z-index: 10;
+	transform: translateX(-50%);
+
+	-webkit-animation: arrow 2s linear infinite;
+	animation: arrow 2s linear infinite;
+}
+
+@-webkit-keyframes arrow {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes arrow {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+
+
+
+
+
 .section_1_form .category_form {
 	margin-bottom: 0;
 	padding-bottom: 40px;
@@ -783,15 +831,26 @@ aside .aside_menu_ul li a.active::after {
 	background-repeat: no-repeat;
 	background-position: center 0%;
 	background-size: cover;
-	min-height: 796px;
+	min-height: auto;
 }
 
 /* Фоновые изоображения для элементов слайдера */
 /* .section_1 .item.item_X */
 /* X - номер слайда*/
 .section_1 .item.item_1 {
-	background-image: url('../img/main/bg_1.jpg');
+	/*background-image: url('../img/main/bg_1.jpg');*/
+	background-image: url('../img/banners/1.jpg');
 }
+.section_1 .item.item_2 {
+	background-image: url('../img/banners/2.jpg');
+}
+.section_1 .item.item_3 {
+	background-image: url('../img/banners/3.jpg');
+}
+.section_1 .item.item_4 {
+	background-image: url('../img/banners/4.jpg');
+}
+
 /*============*/
 .section_1 .item .title {
 	font-size: 24px;
@@ -812,6 +871,7 @@ aside .aside_menu_ul li a.active::after {
 	height: 42px;
 	text-align: center;
 	line-height: 40px;
+	background: rgba(7, 19, 37, .7);
 	border: 1px solid #ed1f24;
 	transition: all .2s ease-in-out;
 
@@ -1394,7 +1454,7 @@ aside .aside_menu_ul li a.active::after {
 	color: #071325;
 	font-family: "RobotoSlabBold";
 	margin: 0;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .section_5 p {
@@ -1437,7 +1497,7 @@ aside .aside_menu_ul li a.active::after {
 }
 
 .section_6 h2 {
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 }
 
 .section_6 .advantages_block {
@@ -1489,7 +1549,7 @@ aside .aside_menu_ul li a.active::after {
 .section_7 .brands img {
 	display: block;
 	max-width: 100%;
-	margin: 15px auto;
+	margin: 12px auto;
 }
 
 /* секци 8 */
@@ -1503,7 +1563,7 @@ aside .aside_menu_ul li a.active::after {
 	justify-content: center;
 }
 .section_8 div#map {
-	height: 500px;
+	height: 400px;
 	width: 100%;
 }
 
@@ -1518,6 +1578,12 @@ aside .aside_menu_ul li a.active::after {
 	color: #071325;
 	margin-bottom: 45px;
 }
+
+
+
+
+
+
 /* Страница контакты */
 .contacts .contact_title {
 	font-size: 17px;
@@ -1536,6 +1602,10 @@ aside .aside_menu_ul li a.active::after {
 
 
 /* Футер */
+footer {
+	margin-right: -15px;
+	margin-left: -15px;
+}
 footer .copy_block {
 	text-align: right;
 	font-size: 16px;

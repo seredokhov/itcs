@@ -148,3 +148,76 @@ $(function() {
 		}
 	}
 })
+
+
+
+// Прокрутка страниц на главной
+
+
+$(function() {
+
+	if ($(window).width() > 1200) {
+		var sections = $('.scroll').find('section'),
+			elem = $('.scroll'),
+			counter = 0,
+			delay = 500,
+			link = $('.scroll_controls').find('a');
+
+		// Обработчики
+		 elem.on("wheel", onWheel);
+		 link.on('click', slide);
+
+
+		// Функция Прокрутки
+		function onWheel(e) {
+
+			var delta;
+
+			// Задержка прокрутки до окончания анимации
+			elem.off("wheel", onWheel);
+			setTimeout(function(){
+				elem.on("wheel", onWheel);
+				},
+				delay
+			);
+
+			e = e.originalEvent || window.event;
+			delta = e.deltaY || e.detail || e.wheelDelta;
+
+			if (delta > 0 && counter < sections.length-1) {
+				counter++;
+				sections.eq(counter).animate({top:'0'},delay);
+				controls();
+				
+			} else if ( delta < 0 && counter > 0 ) {
+				counter--;
+				sections.eq(counter+1).animate({top:'100%'},delay);
+				controls();			
+			}
+			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+		 }
+
+
+
+		 // Переключчение слайда по навигации
+		function slide() {
+			var thisSec;
+
+			counter = +$(this).index();
+			thisSec = sections.eq(counter);		
+			controls();
+
+			thisSec.prevAll().css({top:'0%'});
+			thisSec.css({top:'0%'});
+			thisSec.nextUntil('.scroll_controls').css({top:'100%'});
+			return false;
+		}
+
+
+		// Навигация
+		function controls() {	 	
+			link.removeClass('active');
+			link.eq(counter).addClass('active');
+		}
+	}
+})

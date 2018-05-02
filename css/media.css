@@ -10,7 +10,9 @@
 	}
 }
 @media only screen and (max-width : 1200px) {
-
+	div#arrow {
+		display: none;
+	}
 	.category_form {
 		padding: 20px 40px;
 	}
@@ -95,6 +97,7 @@
 	.section_7 {
 		padding: 40px 0;
 	}
+
 }
 
 /* Medium Devices, Desktops */
@@ -409,37 +412,131 @@
 	}
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+/* Стили для прокрутки секций */
 
+@media only screen and (min-width: 1650px) {
+	.section_1 .item {
+		min-height: 796px;
+	}
 }
 
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 	.container {
 		width: 1200px;
+	}	
+
+	.section_1 .item {
+		padding: 0;
+		padding-top: 80px;
+		padding-bottom: 360px;
+	}
+	.section_1_form {
+		bottom: 50px;
+	}
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+	}
+	.scroll section {		
+		padding-top: 144px;
+		overflow: hidden;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: 100;
+		top: 100%;
+	}
+	
+	.scroll .section_1 {
+		position: relative;
+		padding-top: 140px;
+	}
+	.scroll .section_6 {
+		padding-top: 160px;
+	}
+	.section_2, .section_3, .section_4 {
+		padding: 0px;
+		padding-top: 10px;
+	}
+	.section_5,
+	.section_6,
+	.section_7,
+	.section_8 {
+		background-color: #fff; 
+	}
+	.section_5 .img_block {
+		padding: 100px 0;
+	}
+	.scroll .section_7 {
+		padding-top: 160px;
+	}
+	.section_4 .polygon_block {
+		margin-top: 50px;
+	}
+	.section_8 .row_flex {
+		padding: 30px 0;
+	}
+	body {
+		overflow: hidden;
+	}
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin: 0;
+	}
+	.scroll_controls {
+		display: flex;
+	}
+	.polygon_block {
+		transform: scale(.8);
+	}
+	.section_1 .next {
+		right: 60px;
+	}
+	.section_1 .prev {
+		left: 60px;
+	}
+}
+@media only screen and (min-width: 1200px) and (max-width : 1450px) {
+	.section_1 .item h1 {
+		margin-bottom: 30px;
+	}
+	.scroll .section_2,
+	.scroll .section_3,
+	.scroll .section_4,
+	.scroll .section_5 {
+		padding-top: 95px;
+	}
+	.scroll .section_6 {
+		padding-top: 144px;
+	}
+	.polygon_block {
+		transform: scale(.7);
+	}
+	.advantage span {
+		font-size: 15px;
+	}
+	.section_7 h2 {
+		margin-bottom: 25px;
+	}
+	.section_7 .brands img {
+		margin: 0;
+		margin-bottom: 15px;
+	}
+	.section_8 .contact_title {
+		margin-bottom: 10px;
+	}
+	.section_8 div#map {
+		height: 300px;
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1350px) {
+	.section_1 .item.item > div {
+		padding: 0 85px;
 	}
 }
