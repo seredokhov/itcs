@@ -477,7 +477,7 @@
 	.section_8 .row_flex {
 		padding: 30px 0;
 	}
-	body {
+	body#main {
 		overflow: hidden;
 	}
 	footer {
