@@ -436,7 +436,7 @@
 	header {
 		position: fixed;
 		width: 100%;
-		z-index: 999;
+		z-index: 4;
 	}
 	.scroll section {		
 		padding-top: 144px;
